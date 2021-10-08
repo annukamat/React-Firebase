@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from 'react-router-dom'
 import "../../index.css";
 import "./navbar.css";
 
@@ -8,13 +9,13 @@ const Navbar = () => {
   return (
     <>
       <section className="navbar-bg">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
-            <a class="navbar-brand" href="#">
+        <nav className="navbar navbar-expand-lg navbar-light">
+          <div className="container">
+            <NavLink className="navbar-brand" to="/">
               Logo
-            </a>
+            </NavLink>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -23,42 +24,49 @@ const Navbar = () => {
               aria-label="Toggle navigation"
               onClick={() => setShow(!show)}
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class={`collapse navbar-collapse ${show ? "show" : ""}`}>
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <div className={`collapse navbar-collapse ${show ? "show" : ""}`}>
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 {/* me - maargin end | ms - margin start */}
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
+                <li className="nav-item">
+                  <NavLink className="nav-link active" aria-current="page" to="/">
                     Home
-                  </a>
+                  </NavLink>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/">
                     Link
-                  </a>
+                  </NavLink>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/service">
                     Services
-                  </a>
+                  </NavLink>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/about">
                     About
-                  </a>
+                  </NavLink>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/contact">
                     Contact
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
 
-              <button class="btn btn-outline btn-style" style={{marginRight: "2rem"}} type="submit">
+              <button
+                className="btn btn-outline btn-style"
+                style={{ marginRight: "2rem" }}
+                type="submit"
+              >
                 Log in
               </button>
-              <button class="btn btn-outline btn-style btn-style-rt" type="submit">
+              <button
+                className="btn btn-outline btn-style btn-style-rt"
+                type="submit"
+              >
                 Sign Up
               </button>
             </div>
