@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../Component/Navbar/navbar';
+import Footer from '../Component/Footer/footer.js';
+import Contacts from '../Component/ContactUs/contact';
 
 const Contact = () => {
     return (
-        <div>
-            <h1>Contact</h1>
-        </div>
+        <>
+        <Navbar/>
+        <Contacts/>
+        <Footer/>
+    </>
     )
 }
 export default Contact;
