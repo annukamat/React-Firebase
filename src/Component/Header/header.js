@@ -9,7 +9,7 @@ const Header = () => {
       <header>
         <section className="container main-hero-container">
           <div className="row">
-            <div className="col-12 col-lg-6 header-left-side d-flex flex-column justify-content-center align-items-start">
+            <div className="col-12 col-lg-6 header-left-side d-flex flex-column justify-content-center align-items-start order-lg-first order-last">
               <h1 className="display-2">
                 Online Payment Made <br /> Easy for You.
               </h1>
@@ -21,12 +21,12 @@ const Header = () => {
               <div className="input-group mt-3">
                 <input
                   type="text"
-                  className="rounded-pill w-75 me-3 p-2 form-control-text" placeholder="Enter Your Email"
+                  className="rounded-pill w-75 w-lg-75 me-3 p-2 form-control-text" placeholder="Enter Your Email"
                 ></input>
                 <div className="input-group-button">Get It Now</div>
               </div>
             </div>
-            <div className="col-12 col-lg-6 header-right-side main-herosection-images d-flex justify-content-center align-items-center">
+            <div className="col-12 col-lg-6 header-right-side main-herosection-images d-flex justify-content-center align-items-center order-md-first order-sm-first">
                 <img src={HeroImg1} alt="hero-img" className="img-fluid" />
                 <img src={HeroImg4} alt="hero-img" className="img-fluid main-herosection-img2" />
             </div>

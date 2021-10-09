@@ -1,36 +1,56 @@
 .work-container {
-    width: 80vw;
-    padding: 5rem;
-    box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.1);
-    margin-top: -9rem;
-    background-color: #fff;
-    border-radius: 0.5rem;
+  width: 80vw;
+  padding: 5rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+  margin-top: -9rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
 }
 
 .work-container .main-heading {
-    font-size: 3rem;
-    font-weight: bolder;
-    margin-bottom: 4rem;
-    word-spacing: 1rem;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 4rem;
+  word-spacing: 1rem;
 }
 
-.work-container-subDiv{
-    padding: 0 0.6rem;
+.work-container-subDiv {
+  padding: 0 0.6rem;
 }
 
-.work-container .sub-heading{
-    font-size: 2rem;
-    font-weight: normal;
+.work-container .sub-heading {
+  font-size: 2rem;
+  font-weight: normal;
 }
 .fontAwesome-style {
-    font-size: 2.3rem;
-    color: var(--primary-color);
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    background-color: var(--bgcolor);
-    display: grid;
-    place-items: center;
-    text-align: center;
-    margin: 2rem auto;
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: var(--bgcolor);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+
+
+@media (max-width: 980px) {
+  .work-container {
+    width: 80vw;
+    padding: 5rem 1rem;
   }
+  .work-container .main-heading {
+    font-size: 2.7rem;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+    word-spacing: 0rem;
+  }
+
+  .work-container-subDiv {
+    padding: 0 0rem;
+    margin-top: 1rem;
+  }
+}

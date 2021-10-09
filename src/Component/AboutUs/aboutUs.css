@@ -50,3 +50,33 @@
 .our-service-right-side-content {
     padding-left: 8rem;
 }
+
+
+@media (max-width: 980px){
+
+    .our-service-list {
+        padding-left: 3rem;
+    }
+    .our-service-rightside-img{
+        text-align: center;
+    }
+    .our-services img {
+        width: 70%;
+        height: 85%;
+    }
+    .our-services .our-service-leftside-img img{
+        margin-top: 0;
+    }
+    .service-container .work-container-subdiv {
+        padding: 0.2rem;
+        margin: 2rem auto;
+    }
+    .service-container .main-heading {
+        margin: 5rem auto 0 auto;
+        font-weight: bolder;
+    }
+    .our-service-right-side-content{
+        padding-left: 3rem;
+    }
+    
+}

@@ -43,3 +43,22 @@
 .main-hero-para {
     margin: 0;
 }
+
+@media (max-width: 980px){
+
+  .contactus-section{
+    margin: 5rem 0;
+  }
+  .contact-rightside{
+    margin-top: 5rem;
+  }
+  .contact-rightside form .main-hero-para {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin: 0;
+    font-weight: lighter;
+    width: 98%;
+    padding: 0px 1rem;
+  }
+
+}

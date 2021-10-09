@@ -72,3 +72,46 @@ header {
     top: -2%;
     box-shadow: 0.8rem 0 0.8rem rgba(0,0,0,0.25);
 }
+
+@media (max-width: 980px){
+  
+  /* main hero container */
+  .main-hero-container h1 {
+    font-size: 2.5rem;
+  }
+  .main-hero-para {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  .main-hero-container .header-left-side {
+    padding-left: 4rem;
+    margin-top: 1rem;
+  }
+  .main-herosection-images {
+    position: relative;
+    height: 25rem;
+  }
+
+  .header-right-side img {
+    width: 60%;
+    height: 100%;
+    margin-top: 1rem;
+  }
+  .header-right-side .main-herosection-img2{
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    left: 50%;
+    top: -2%;
+    box-shadow: 0.8rem 0 0.8rem rgba(0,0,0,0.25);
+  }
+
+  .input-group .input-group-button{
+    right: 26%;
+    width: 30%;
+  }
+
+
+
+}
