@@ -1,8 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroImg1 from "../../Assets/hero1.jpg";
-import './contactUs.css'
+import "./contactUs.css";
 
 const Contact = () => {
+  const [userData, setUserData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    address: "",
+    message: "",
+  });
+
+  let name, value;
+  const postUserData = (e) => {
+    name = e.target.name;
+    value = e.target.value;
+
+    setUserData({ ...userData, [name]: value });
+  };
+
+  // connect with firebase
+  const submitData = async (e) => {
+    e.preventDefault();
+    const { firstName, lastName, phone, email, address, message } = userData;
+    if(firstName, lastName, phone, email, address, message){
+      const res = fetch(
+        "https://reactfirebasewebsite-78cf2-default-rtdb.firebaseio.com/userDataRecords.json",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            phone,
+            email,
+            address,
+            message,
+          }),
+        }
+      )
+
+      if (res) {
+        setUserData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          address: "",
+          message: "",
+        })
+        alert("Data Stored");
+      } else {
+        alert("Please fill the data");
+      }
+    }else {
+      alert("Please fill the data");
+    }
+  };
+
   return (
     <>
       <section className="contactus-section">
@@ -37,6 +95,8 @@ const Contact = () => {
                           name="firstName"
                           id=""
                           className="form-control"
+                          value={userData.firstName}
+                          onChange={postUserData}
                           placeholder="First Name"
                         />
                       </div>
@@ -46,6 +106,8 @@ const Contact = () => {
                           name="lastName"
                           id=""
                           className="form-control"
+                          value={userData.lastName}
+                          onChange={postUserData}
                           placeholder="Last Name"
                         />
                       </div>
@@ -57,7 +119,9 @@ const Contact = () => {
                           name="phone"
                           id=""
                           className="form-control"
-                          placeholder="Phone Number "
+                          value={userData.phone}
+                          onChange={postUserData}
+                          placeholder="Phone Number"
                         />
                       </div>
                       <div className="col-12 col-lg-6 contact-input-feild">
@@ -66,6 +130,8 @@ const Contact = () => {
                           name="email"
                           id=""
                           className="form-control"
+                          value={userData.email}
+                          onChange={postUserData}
                           placeholder="Email ID"
                         />
                       </div>
@@ -77,6 +143,8 @@ const Contact = () => {
                           name="address"
                           id=""
                           className="form-control"
+                          value={userData.address}
+                          onChange={postUserData}
                           placeholder="Add Address"
                         />
                       </div>
@@ -89,6 +157,8 @@ const Contact = () => {
                           name="message"
                           id=""
                           className="form-control"
+                          value={userData.message}
+                          onChange={postUserData}
                           placeholder="Enter Your Message"
                         />
                       </div>
@@ -97,7 +167,7 @@ const Contact = () => {
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        value=""
+                        // value="userData.firstName"
                         id="flexCheckChecked"
                       />
                       <label
@@ -109,7 +179,11 @@ const Contact = () => {
                       </label>
                     </div>
 
-                    <button type="submit" className="btn btn-style w-100">
+                    <button
+                      type="submit"
+                      className="btn btn-style w-100"
+                      onClick={submitData}
+                    >
                       Submit
                     </button>
                   </form>
